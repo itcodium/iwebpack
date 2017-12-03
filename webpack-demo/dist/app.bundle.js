@@ -6,9 +6,9 @@
 /******/ 	function __webpack_require__(moduleId) {
 /******/
 /******/ 		// Check if module is in cache
-/******/ 		if(installedModules[moduleId]) {
+/******/ 		if(installedModules[moduleId])
 /******/ 			return installedModules[moduleId].exports;
-/******/ 		}
+/******/
 /******/ 		// Create a new module (and put it into the cache)
 /******/ 		var module = installedModules[moduleId] = {
 /******/ 			i: moduleId,
@@ -33,15 +33,16 @@
 /******/ 	// expose the module cache
 /******/ 	__webpack_require__.c = installedModules;
 /******/
-/******/ 	// define getter function for harmony exports
+/******/ 	// identity function for calling harmory imports with the correct context
+/******/ 	__webpack_require__.i = function(value) { return value; };
+/******/
+/******/ 	// define getter function for harmory exports
 /******/ 	__webpack_require__.d = function(exports, name, getter) {
-/******/ 		if(!__webpack_require__.o(exports, name)) {
-/******/ 			Object.defineProperty(exports, name, {
-/******/ 				configurable: false,
-/******/ 				enumerable: true,
-/******/ 				get: getter
-/******/ 			});
-/******/ 		}
+/******/ 		Object.defineProperty(exports, name, {
+/******/ 			configurable: false,
+/******/ 			enumerable: true,
+/******/ 			get: getter
+/******/ 		});
 /******/ 	};
 /******/
 /******/ 	// getDefaultExport function for compatibility with non-harmony modules
@@ -60,32 +61,22 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 0);
+/******/ 	return __webpack_require__(__webpack_require__.s = 4);
 /******/ })
 /************************************************************************/
 /******/ ([
 /* 0 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_lodash__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_lodash___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_lodash__);
-
-function component() {
-  var element = document.createElement('div');
-   // Lodash, now imported by this script
-  element.innerHTML = __WEBPACK_IMPORTED_MODULE_0_lodash___default.a.join(['Hello', 'webpack'], ' ');
-  return element;
+/* harmony export (immutable) */ exports["default"] = printMe;
+function printMe() {
+  console.log('I get called from print.js!');
 }
 
-document.body.appendChild(component());
-
- 
-
-/***/ }),
+/***/ },
 /* 1 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global, module) {var __WEBPACK_AMD_DEFINE_RESULT__;/**
  * @license
@@ -17155,10 +17146,9 @@ document.body.appendChild(component());
 
     // Define as an anonymous module so, through path mapping, it can be
     // referenced as the "underscore" module.
-    !(__WEBPACK_AMD_DEFINE_RESULT__ = (function() {
+    !(__WEBPACK_AMD_DEFINE_RESULT__ = function() {
       return _;
-    }).call(exports, __webpack_require__, exports, module),
-				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+    }.call(exports, __webpack_require__, exports, module), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
   }
   // Check for `exports` after `define` in case a build optimizer adds it.
   else if (freeModule) {
@@ -17175,16 +17165,14 @@ document.body.appendChild(component());
 
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2), __webpack_require__(3)(module)))
 
-/***/ }),
+/***/ },
 /* 2 */
-/***/ (function(module, exports) {
+/***/ function(module, exports) {
 
 var g;
 
 // This works in non-strict mode
-g = (function() {
-	return this;
-})();
+g = (function() { return this; })();
 
 try {
 	// This works if eval is allowed (see CSP)
@@ -17202,9 +17190,9 @@ try {
 module.exports = g;
 
 
-/***/ }),
+/***/ },
 /* 3 */
-/***/ (function(module, exports) {
+/***/ function(module, exports) {
 
 module.exports = function(module) {
 	if(!module.webpackPolyfill) {
@@ -17214,21 +17202,46 @@ module.exports = function(module) {
 		if(!module.children) module.children = [];
 		Object.defineProperty(module, "loaded", {
 			enumerable: true,
-			get: function() {
-				return module.l;
-			}
+			configurable: false,
+			get: function() { return module.l; }
 		});
 		Object.defineProperty(module, "id", {
 			enumerable: true,
-			get: function() {
-				return module.i;
-			}
+			configurable: false,
+			get: function() { return module.i; }
 		});
 		module.webpackPolyfill = 1;
 	}
 	return module;
-};
+}
 
 
-/***/ })
+/***/ },
+/* 4 */
+/***/ function(module, exports, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_lodash__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_lodash___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_lodash__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__print_js__ = __webpack_require__(0);
+  
+ 
+
+  function component() {
+    var element = document.createElement('div');
+   var btn = document.createElement('button');
+
+    element.innerHTML = __WEBPACK_IMPORTED_MODULE_0_lodash___default.a.join(['Hello', 'webpack'], ' ');
+
+   btn.innerHTML = 'Click me and check the console!';
+   btn.onclick = __WEBPACK_IMPORTED_MODULE_1__print_js__["default"];
+
+   element.appendChild(btn);
+
+    return element;
+  }
+
+  document.body.appendChild(component());
+
+/***/ }
 /******/ ]);

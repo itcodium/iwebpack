@@ -1,4 +1,15 @@
+  @font-face {
+   font-family: 'Chunk';
+   src:  url('./Chunkfive-webfont.woff') format('woff'),
+         url('./Chunkfive-webfont.ttf') format('woff2');
+   font-weight: 600;
+   font-style: normal;
+ }
+
 .hello {
+  font-family: 'Chunk';
   color: red;
-  background: url('./icon.png');
+  padding-bottom: 30px;
+  background-repeat: no-repeat; 
+
 }

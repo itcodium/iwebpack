@@ -33,7 +33,7 @@
 
 
 
-## IMPORTANTE, deshabilitar antivirus al instalar modulos de lo sontrario se puede producir el siguiente error o similar:
+## IMPORTANTE, deshabilitar antivirus al instalar modulos de lo contrario se puede producir el siguiente error u otro similar:
 
 	npm ERR!   stack: 'Error: EPERM: operation not permitted, lstat 
 	\'webpack-demo\node_modules\fsevents\node_modules\'',

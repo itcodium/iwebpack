@@ -20,3 +20,6 @@
 
 	##Loading Images
 	npm install --save-dev file-loader
+
+	##Loading Data
+	npm install --save-dev csv-loader xml-loader

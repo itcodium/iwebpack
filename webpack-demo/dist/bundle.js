@@ -75,6 +75,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__style_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__style_css__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__icon_png__ = __webpack_require__(11);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__icon_png___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__icon_png__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__data_xml__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__data_xml___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__data_xml__);
+
 
 
 
@@ -87,8 +90,10 @@ function component() {
    // Add the image to our existing div.
   var myIcon = new Image();
   myIcon.src = __WEBPACK_IMPORTED_MODULE_2__icon_png___default.a;
-
   element.appendChild(myIcon);
+
+  console.log(__WEBPACK_IMPORTED_MODULE_3__data_xml___default.a);
+  
   return element;
 }
 
@@ -17854,6 +17859,12 @@ module.exports = function (css) {
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "5c5694a7b6fe2952904467f0e0816d52.png";
+
+/***/ }),
+/* 12 */
+/***/ (function(module, exports) {
+
+module.exports = {"note":{"to":["Mary"],"from":["John"],"heading":["Reminder"],"body":["Call Cindy on Tuesday"]}}
 
 /***/ })
 /******/ ]);

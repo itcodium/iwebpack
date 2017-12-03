@@ -16,5 +16,7 @@
 		npm run build
 
 	##Asset Management
-
 	npm install --save-dev style-loader css-loader
+
+	##Loading Images
+	npm install --save-dev file-loader

@@ -3,6 +3,7 @@
 	##basic build 
 	
 	npm install --global webpack
+	npm install --save lodash
 	npx webpack src/index.js dist/bundle.js
 	npx webpack --config webpack.config.js
 	
@@ -13,3 +14,7 @@
 		},
 		
 		npm run build
+
+	##Asset Management
+
+	npm install --save-dev style-loader css-loader

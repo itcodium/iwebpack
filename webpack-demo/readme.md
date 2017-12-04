@@ -2,7 +2,11 @@
 
 	##basic build 
 	
+	npm install --save-dev webpack@2.1.0-beta.25
 	npm install --global webpack
+	
+
+
 	npm install --save lodash
 	npx webpack src/index.js dist/bundle.js
 	npx webpack --config webpack.config.js
@@ -30,6 +34,28 @@
 	##Cleaning up the /dist folder 
 	npm install clean-webpack-plugin --save-dev
 
+
+	#Development
+
+		webpack.config.js
+			devtool: 'inline-source-map',
+
+		package.json: 
+			"watch": "webpack --watch"
+
+			npm run watch
+	#Using webpack-dev-server
+		npm install --save-dev webpack-dev-server
+
+		para webpack 2.1.0-beta.25	utilizar:
+	  	
+	  	package.json
+	  		"webpack-dev-server": "2.1.0-beta.10",
+
+	  	run:
+	  		1. delete package-lock.json	
+	  		2. npm uninstall
+	  		3. npm install
 
 
 

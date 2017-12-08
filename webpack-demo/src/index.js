@@ -4,6 +4,13 @@ import printMe from './print.js';
 import { cube } from './math.js';
 import './styles.css';
 
+
+if (process.env.NODE_ENV !== 'production') {
+   console.log('Looks like we are in development mode!');
+ }else{
+   console.log('Looks like we are in PRODUCTION mode!');
+ }
+
   function component() {
    var element = document.createElement('div');
    var elementPre = document.createElement('pre');

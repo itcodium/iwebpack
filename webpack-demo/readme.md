@@ -80,6 +80,9 @@
 	  
 	  npm i --save-dev uglifyjs-webpack-plugin
 
+	#Production
+
+		npm install --save-dev webpack-merge
 
 ## IMPORTANTE, deshabilitar antivirus al instalar modulos de lo contrario se puede producir el siguiente error u otro similar:
 

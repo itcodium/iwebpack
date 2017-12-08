@@ -4,12 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "watch": "webpack --watch",
     "server": "node server.js",
     "start": "webpack-dev-server --open --hotOnly --config webpack.dev.js",
     "prod": "webpack-dev-server --open --hotOnly --config webpack.prod.js",
-     "build": "webpack --config webpack.prod.js"
+    "config": "webpack-dev-server --open --hotOnly --config webpack.config.js",
+    "build": "webpack --config webpack.prod.js",
+    "test": "webpack"
   },
   "keywords": [],
   "author": "",

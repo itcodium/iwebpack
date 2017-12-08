@@ -1,4 +1,5 @@
 const path = require('path');
+const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const webpack = require('webpack');
@@ -26,7 +27,9 @@ const webpack = require('webpack');
        title: 'Hot Module Replacement'
      }),
      new webpack.NamedModulesPlugin(),
-     new webpack.HotModuleReplacementPlugin()
+     new webpack.HotModuleReplacementPlugin(),
+     new UglifyJSPlugin()
+
    ],
     output: {
       filename: '[name].bundle.js',

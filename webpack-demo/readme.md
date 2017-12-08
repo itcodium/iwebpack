@@ -72,6 +72,14 @@
 
 		npm install --save-dev style-loader css-loader
 
+	# Tree Shaking
+
+	  Is a term commonly used in the JavaScript context for dead-code elimination 
+	
+	## Minify the Output
+	  
+	  npm i --save-dev uglifyjs-webpack-plugin
+
 
 ## IMPORTANTE, deshabilitar antivirus al instalar modulos de lo contrario se puede producir el siguiente error u otro similar:
 
@@ -89,6 +97,6 @@
 
 ##  Actualizaciones
 
-	0. borrar package-lock.json
+	0. borrar package-lock.json y carpeta node_modules
 	1. Modificar el package.json
 	2. npm update o npm install

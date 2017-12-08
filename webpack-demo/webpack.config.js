@@ -6,8 +6,7 @@ const webpack = require('webpack');
 
   module.exports = {
     entry: {
-      app: './src/index.js',
-      another: './src/another-module.js'
+      app: './src/index.js'
     },
    devtool: 'inline-source-map',
      devServer: {
@@ -29,9 +28,6 @@ const webpack = require('webpack');
      }),
      new webpack.NamedModulesPlugin(),
      new webpack.HotModuleReplacementPlugin(),
-     new webpack.optimize.CommonsChunkPlugin({
-       name: 'common'
-     }),
      new UglifyJSPlugin()
 
    ],
@@ -41,4 +37,6 @@ const webpack = require('webpack');
       publicPath: '/'
     }
   };
+ 
+
  

@@ -61,6 +61,18 @@
 		npm install --save-dev express webpack-dev-middleware
 
 
+	#Hot Module Replacement
+	It allows all kinds of modules to be updated at runtime without the need for a full refresh
+	package.json
+
+		"start": "webpack-dev-server --hotOnly",
+		npm start
+
+	##HMR with Stylesheets		
+
+		npm install --save-dev style-loader css-loader
+
+
 ## IMPORTANTE, deshabilitar antivirus al instalar modulos de lo contrario se puede producir el siguiente error u otro similar:
 
 	npm ERR!   stack: 'Error: EPERM: operation not permitted, lstat 
@@ -71,3 +83,12 @@
 	npm ERR!   path: 'webpack-demo\node_modules\fsevents\node_modules' }
 
 	npm ERR! Please try running this command again as root/Administrator.
+
+	C:\\Users\\MYEQ\\Desktop\\github\\iwebpack\\webpack-demo
+
+
+##  Actualizaciones
+
+	0. borrar package-lock.json
+	1. Modificar el package.json
+	2. npm update o npm install

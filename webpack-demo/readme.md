@@ -57,6 +57,8 @@
 	  		2. npm uninstall
 	  		3. npm install
 
+	#Using webpack-dev-middleware
+		npm install --save-dev express webpack-dev-middleware
 
 
 ## IMPORTANTE, deshabilitar antivirus al instalar modulos de lo contrario se puede producir el siguiente error u otro similar:

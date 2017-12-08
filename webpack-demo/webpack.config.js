@@ -19,6 +19,7 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
    ],
     output: {
       filename: '[name].bundle.js',
-      path: path.resolve(__dirname, 'dist')
+      path: path.resolve(__dirname, 'dist'),
+      publicPath: '/'
     }
   };

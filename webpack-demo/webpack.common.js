@@ -23,14 +23,14 @@ const webpack = require('webpack');
    plugins: [
      new CleanWebpackPlugin(['dist']),
      new HtmlWebpackPlugin({
-       title: 'Production'
+        title: 'Caching'
      }),
      new webpack.NamedModulesPlugin(),
      new webpack.HotModuleReplacementPlugin()
 
    ],
    output: {
-     filename: '[name].bundle.js',
+      filename: '[name].bundle.js',
      path: path.resolve(__dirname, 'dist')
    }
  };

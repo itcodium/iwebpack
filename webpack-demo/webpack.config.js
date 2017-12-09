@@ -4,10 +4,14 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const webpack = require('webpack');
 
+
   module.exports = {
-    entry: {
-      app: './src/index.js'
-    },
+     entry: {
+     main: './src/index.js',
+     vendor: [
+       'lodash'
+     ]
+   },
    devtool: 'inline-source-map',
      devServer: {
      contentBase: './dist',
@@ -22,17 +26,21 @@ const webpack = require('webpack');
      ]
    },
    plugins: [
+
      new CleanWebpackPlugin(['dist']),
      new HtmlWebpackPlugin({
-       title: 'Code Splitting'
+           title: 'Caching'
      }),
      new webpack.NamedModulesPlugin(),
+     new webpack.HashedModuleIdsPlugin(),
      new webpack.HotModuleReplacementPlugin(),
-     new UglifyJSPlugin()
+     new webpack.optimize.CommonsChunkPlugin({
+       name: 'vendor'
+     })
 
    ],
     output: {
-      filename: '[name].bundle.js',
+      filename: '[name].[chunkhash].js',
       path: path.resolve(__dirname, 'dist'),
       publicPath: '/'
     }

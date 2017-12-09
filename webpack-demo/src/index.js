@@ -1,6 +1,6 @@
  
 import _ from 'lodash';
-import printMe from './print.js';
+import Print from './print';
 import { cube } from './math.js';
 import './styles.css';
 
@@ -10,7 +10,10 @@ if (process.env.NODE_ENV !== 'production') {
  }else{
    console.log('Looks like we are in PRODUCTION mode!');
  }
-
+/*
+coment
+*/
+function test(){}
 
  function component() {
     var element = document.createElement('div');
@@ -20,6 +23,7 @@ if (process.env.NODE_ENV !== 'production') {
 
    button.innerHTML = 'Click me and look at the console!';
    element.innerHTML = _.join(['Hello', 'webpack'], ' ');
+   element.onclick = Print.bind(null, 'Hello webpack!');
    
     elementPre.innerHTML = [
          'Hello webpack!',

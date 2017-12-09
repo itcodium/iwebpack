@@ -9,8 +9,7 @@
     "start": "webpack-dev-server --open --hotOnly --config webpack.dev.js",
     "prod": "webpack-dev-server --open --hotOnly --config webpack.prod.js",
     "config": "webpack-dev-server --open --hotOnly --config webpack.config.js",
-    "build": "webpack --config webpack.prod.js",
-    "test": "webpack"
+    "build": "webpack --config webpack.config.js"
   },
   "keywords": [],
   "author": "",

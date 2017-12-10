@@ -1,0 +1,23 @@
+<!-- index.html 
+
+<script src="https://unpkg.com/webpack-numbers"></script>
+
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+     <title>webpack library example - Transalating numbers</title>
+</head>
+<body>
+ <div id='root'>
+        </div>
+        <script type='text/javascript' src='./webpack-numbers.js'></script>
+        <script type='text/javascript'>
+            document.getElementById('root').innerHTML = " This is a browser example where and api is called to transalate 'One' to '1' \n Results: wordtonum('One') === " + webpackNumbers.wordToNum('One');
+        </script>
+
+</body>
+</html>
+
+

@@ -1,0 +1,20 @@
+@font-face {
+   font-family: 'Ostrich Sans Rounded';
+   src:  url('./fonts/ostrich-sans-rounded.woff') format('woff'), 
+   		 url('./fonts/ostrich-sans-rounded.ttf') format('truetype'), 
+   		 url('./fonts/ostrich-sans-rounded.svg') format('svg');
+
+   	font-weight: 500;
+	font-style: normal;
+ }
+
+.hello {
+  color: blue;
+  font-family: 'Ostrich Sans Rounded';
+  font-size: 100px;
+}
+
+.image {
+  color: green;
+   background: url('./icon.png') no-repeat;
+}

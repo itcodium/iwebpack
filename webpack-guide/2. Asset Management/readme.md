@@ -10,9 +10,9 @@
 		npm install --save-dev csv-loader xml-loader
 	
 
-Global Assets
 
 Referencias 
 
 https://webpack.js.org/guides/asset-management/
+
 

@@ -1,6 +1,7 @@
 # Development
 
 	npm install --save-dev webpack-dev-server
+	npm install --save-dev express webpack-dev-middleware
 
 
 ## Using Watch Mode
@@ -8,13 +9,11 @@
 	run npm run watch from the command line to see that webpack compiles your code, but doesn't exit to the command line. This is because the script is still watching your files.
 
 	webpack.config.js
-
 		module.exports = {
 			devtool: 'inline-source-map',
 		}
    		
 	package.json
-
 	   "scripts": {
 			"watch": "webpack --watch",
 		}
@@ -31,7 +30,6 @@
     }
 
 	package.json
-	
 	   "scripts": {
 			"start": "webpack-dev-server --open",
 		}
